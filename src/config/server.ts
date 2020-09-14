@@ -6,12 +6,11 @@ app.use(express.json());
 
 app.use('/api', require('./api'));
 
+app.use("/",(req, res) =>{res.send("<h1>Welcome to your server!</h1>")})
+
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-   next(createError(404));
- });
-
-app.use("*",(req, res) =>{res.send("<h1>Welcome to your server!</h1>")})
-
+app.use('*', function(req, res, next) {
+  next(createError(404));
+});
 
 app.listen(port,() => console.log(`hosting @${port}`));
