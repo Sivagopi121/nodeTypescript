@@ -6,9 +6,9 @@ https://node-typescript-vik.herokuapp.com
 --header 'Content-Type: application/json' \
 --data-raw '{
     "data": "JOHN0000MICHAEL0009994567"
-}'```
+}'
 
-```curl --location --request POST 'https://node-typescript-vik.herokuapp.com/api/v2/parse' \
+curl --location --request POST 'https://node-typescript-vik.herokuapp.com/api/v2/parse' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "data": "JOHN0000MICHAEL0009994567"
